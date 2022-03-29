@@ -1,0 +1,92 @@
+View all databases
+show dbs
+
+To make new databases or switch to databases
+use dbName
+
+View current db
+db
+
+
+Delete database
+db.dropDatabase()
+
+To show collection collection in Mongodb
+show collections
+
+To create collection in Mongodb
+db.createCollections('tableName')
+
+To drop collection in Mongodb
+db.<collectionName>.drop()
+
+Mongodb command for rows
+Insert One Rows
+db.<collectionName>.insert({
+    'name':'Harry',
+    'key' : 'value'
+})
+
+Insert Many Rows
+db.<collectionName>.insert([{
+    'name':'Abdul',
+    'key' : 'value'
+},
+{
+     'name':'Rafay',
+    'key' : 'value'
+}])
+
+
+To show or display all rows in a collection
+db.<collectionName>.find()
+
+To show row more prettier
+db.<collectionName>.find().pretty()
+
+
+Search in Mongodb database
+db.<collectionName>.find({name:'abdul',username : 'rafay1'})
+
+
+Linit the num of rows output
+db.<collectionName>.find().limit(2)
+
+
+To show the count of the Rows
+db.<collectionName>.find().limit(2).count()
+
+
+To sort the Rows 
+db.<collectionName>.find().limit(2).sort({objct}).pretty()
+
+
+To update the particular rows
+db.<collectionName>.update('username':'rafay1'},
+{
+    'first_name' : 'muqeet'
+
+})
+
+
+nUpserted means
+To add object or insert object in the collection if the object is not in the collection
+db.<collectionName>.update('username':'rafay2'},
+{
+    'first_name' : 'muqeet'
+
+},{upsert:true})
+
+
+Mongodb Increament Operator
+db.<collectionName>.update('username':'rafay1'},
+{$inc:{
+    'first_name' : 'muqeet'
+
+}})
+
+Delete rows
+db.<collectionName>.remove({username:'rafay1'})
+
+To install monog for nodejs
+npm install mongoose
